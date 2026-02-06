@@ -96,6 +96,7 @@
     "@anthropic-ai/claude-code": "^2.1.12",
     "@google/gemini-cli": "^0.30.0",
     "@openai/codex": "^0.104.0",
+    "@github/copilot": "^0.0.405",
     "prettier": "^3.8.0",
     "tsx": "^4.20.3"
   }
