@@ -38,11 +38,7 @@
                 }
               </div>
               @if (group.promptNames.length) {
-                <ul class="status-badge-group prompt-names">
-                  @for (name of group.promptNames; track name) {
-                    <li class="status-badge neutral">{{ name }}</li>
-                  }
-                </ul>
+                <prompt-badge-list [promptNames]="group.promptNames" />
               }
             </div>
             <div class="run-meta-container">

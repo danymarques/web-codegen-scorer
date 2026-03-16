@@ -1,0 +1,21 @@
+<ul
+  #container
+  class="status-badge-group prompt-names"
+  [style.visibility]="measuring() ? 'hidden' : 'visible'"
+>
+  @for (name of visibleNames(); track name) {
+    <li class="status-badge neutral" data-badge>{{ name }}</li>
+  }
+  @if (showToggle()) {
+    <li
+      class="status-badge neutral toggle-badge"
+      (click)="toggle($event)"
+    >
+      @if (expanded()) {
+        Show less
+      } @else {
+        +{{ hiddenCount() }} more
+      }
+    </li>
+  }
+</ul>

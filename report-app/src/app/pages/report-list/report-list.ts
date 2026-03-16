@@ -1,4 +1,4 @@
-import {Component, computed, inject, PLATFORM_ID, signal} from '@angular/core';
+import {Component, inject, PLATFORM_ID, signal} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
 import {ReportsFetcher} from '../../services/reports-fetcher';
 import {DatePipe, isPlatformServer} from '@angular/common';
@@ -12,6 +12,7 @@ import {Score} from '../../shared/score/score';
 import {ProviderLabel} from '../../shared/provider-label';
 import {bucketToScoreVariable} from '../../shared/scoring';
 import {ReportFilters} from '../../shared/report-filters/report-filters';
+import {PromptBadgeList} from './prompt-badge/prompt-badge-list';
 
 @Component({
   selector: 'app-report-list',
@@ -23,6 +24,7 @@ import {ReportFilters} from '../../shared/report-filters/report-filters';
     Score,
     ProviderLabel,
     ReportFilters,
+    PromptBadgeList,
   ],
   templateUrl: './report-list.html',
   styleUrls: ['./report-list.scss'],
